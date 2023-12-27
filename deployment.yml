@@ -20,5 +20,5 @@ spec:
       - image: siddharth67/solar-system:v3
         name: solar-system
         imagePullPolicy: Always
-        ports;
+        ports:
         - containerPort: 80
