@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: app01
+  namespace: solar-system
+spec:
+  hosts:
+  - "app.devoperations.ca"
+  gateways:
+  - app01-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: solar-system-service
+        port:
+          number: 80
