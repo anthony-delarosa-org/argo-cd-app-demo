@@ -1,12 +1,12 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: app01
+  name: shapes-svc
 spec:
   hosts:
-  - "app.devoperations.ca"
+  - "shapes.devoperations.ca"
   gateways:
-  - app01-gateway
+  - shapes-gateway
   http:
   - match:
     - uri:

@@ -1,24 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
-  labels:
-    app: solar-system
-  name: solar-system
+  name: random-shapes
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: solar-system
-  strategy: {}
+      app: random-shapes
+  replicas: 1
   template:
     metadata:
       labels:
-        app: solar-system
+        app: random-shapes
     spec:
       containers:
-      - image: siddharth67/solar-system:v3
-        name: solar-system
+      - name: random-shapes
+        image: siddharth67/php-random-shapes:v1
         imagePullPolicy: Always
-        ports:
-        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: moving-shapes-colors
