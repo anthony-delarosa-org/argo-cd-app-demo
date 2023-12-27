@@ -13,6 +13,6 @@ spec:
         prefix: /
     route:
     - destination:
-        host: solar-system-service
+        host: random-shapes-svc
         port:
           number: 80
