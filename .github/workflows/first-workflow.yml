@@ -14,5 +14,5 @@ jobs:
                chmod +x ascii-script.sh
                ./ascii-script.sh
 
-            - name: Read Files
+            - name: List Files
               run: ls -la
