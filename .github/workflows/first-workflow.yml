@@ -9,19 +9,10 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v4
 
-            - name: List and Read File
+            - name: Executing Shell Script
               run: |
-               echo "These are my files ..."
-               ls -la
-               cat istio/app01-virtual-service.yaml
-            
-            - name: Install Cowsay Program
-              run: sudo apt install cowsay -y
+               chmod +x ascii-script.sh
+               ./ascii-script.sh
 
-            - name: Generate ASCII Artwork
-              run: cowsay -f dragon "Dragons are cool" >> dragon.txt
-
-            - name: Read File
-              run: |
-               cat dragon.txt
-               ls -la
+            - name: Read Files
+              run: ls -la
