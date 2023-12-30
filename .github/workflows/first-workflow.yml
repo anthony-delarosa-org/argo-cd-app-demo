@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               
             - name: Welcome Message
               run: echo "My first Github Action"
@@ -17,6 +17,3 @@ jobs:
 
             - name: Istio File
               run: cat istio/app01-virtual-service.yaml
-
-            - name: Helm
-              run: which helm
