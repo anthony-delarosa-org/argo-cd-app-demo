@@ -8,12 +8,9 @@ jobs:
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v4
-              
-            - name: Welcome Message
-              run: echo "My first Github Action"
 
-            - name: List Files
-              run:  ls -la
-
-            - name: Istio File
-              run: cat istio/app01-virtual-service.yaml
+            - name: List and Read File
+              run: |
+               echo "These are my files ..."
+               ls -la
+               cat istio/app01-virtual-service.yaml
