@@ -14,3 +14,14 @@ jobs:
                echo "These are my files ..."
                ls -la
                cat istio/app01-virtual-service.yaml
+            
+            - name: Install Cowsay Program
+              run: sudo apt install cowsay -y
+
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Dragons are cool" >> dragon.txt
+
+            - name: Read File
+              run: |
+               cat dragon.txt
+               ls -la
