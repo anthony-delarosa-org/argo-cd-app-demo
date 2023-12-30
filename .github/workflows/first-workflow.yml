@@ -30,7 +30,9 @@ jobs:
                 name: turtle-artifact
 
             - name: List Files
-              run:  ls -la
+              run: |
+               pwd
+               ls -la
 
             - name: Display File
               run: cat turtles.txt
