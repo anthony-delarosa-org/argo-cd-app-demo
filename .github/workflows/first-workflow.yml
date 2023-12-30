@@ -17,3 +17,6 @@ jobs:
 
             - name: Istio File
               run: cat istio/app01-virtual-service.yaml
+
+            - name: Helm
+              run: which helm
