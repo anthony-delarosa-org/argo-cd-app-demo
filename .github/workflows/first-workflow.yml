@@ -14,14 +14,23 @@ jobs:
                chmod +x ascii-script.sh
                ./ascii-script.sh
 
-            - name: List Files
-              run: ls -la
+            - name: Upload ASSCI Image
+              uses: actions/upload-artifact@v4
+              with:
+                name: turtle-artifact
+                path: turtles.txt
       
     second_job:
+        needs: first_job
         runs-on: ubuntu-latest
         steps:
-            - name: Sleep
-              run: sleep 30
+            - name: Download ASSCI Image
+              uses: actions/download-artifact@v4
+              with:
+                name: turtle-artifact
+
+            - name: List Files
+              run:  ls -la
 
             - name: Display File
-              run: cat turtle.txt
+              run: cat turtles.txt
