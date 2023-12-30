@@ -4,7 +4,7 @@ on: push
 
 jobs:
     first_job:
-        runs-on: ubutu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v3
