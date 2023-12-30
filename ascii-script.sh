@@ -2,4 +2,3 @@
 
 sudo apt install cowsay -y
 cowsay -f turtle "Turtles are reptiles" >> turtles.txt
-cat turtles.txt
