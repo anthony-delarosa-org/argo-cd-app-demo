@@ -1,0 +1,16 @@
+name: First Worklow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubutu-latest
+        steps:
+            - name: Welcome Message
+              run: echo "My first Github Action"
+
+            - name: List Files
+              run:  ls -la
+
+            - name: Istio File
+              run: cat istio/app01-virtual-service.yaml
