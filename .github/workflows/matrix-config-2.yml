@@ -1,0 +1,20 @@
+name: Matrix Workflow 2
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        commands: [pwd, ls -la]
+        exclude:
+          - commands: [pwd, ls -la]
+            os: windows-latest
+        include:
+          - commands: [dir]
+            os: windows-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: List Directory and Files
+      run: ${{ matrix.commands }}
