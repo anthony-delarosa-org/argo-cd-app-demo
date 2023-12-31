@@ -11,6 +11,8 @@ jobs:
         exclude:
           - commands: pwd
             os: windows-latest
+          - commands: ls -la
+            os: windows-latest
         include:
           - commands: [systeminfo]
             os: windows-latest
